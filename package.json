@@ -2,10 +2,15 @@
   "name": "request_header_parser",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "useragent": "^2.1.9"
+  }
 }
