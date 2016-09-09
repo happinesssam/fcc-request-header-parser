@@ -10,8 +10,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (req, res) {
     var agent = useragent.parse(req.headers['user-agent']);
-    res.render('index', { language:req.get('accept-language'),
-    ipaddress: req.connection.remoteAddress, 
+    var ip = require('ip');
+    res.render('index', { language:req.get('accept-language').split(",")[0],
+    ipaddress: ip.address(), 
     software:agent.toString()});
 }); 
 
